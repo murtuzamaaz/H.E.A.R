@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report an Incident - H.E.A.R</title>
+  <title>Report an Incident - SafeGuard</title>
   <link rel="stylesheet" href="/static/css/header.css">
   <link rel="stylesheet" href="/static/css/footer.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="/static/css/login_credentials.css">
   <script src="js/main.js" defer></script>
 </head>
+
 <body>
   <!-- Header with Navigation -->
   <header>
     <nav>
       <div class="logo">
-        <a href="index.html">H.E.<span>A.R</span></a>
+        <a href="index.html">Safe<span>Guard</span></a>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="report.html" class="active">Report</a></li>
         <li><a href="awareness.html">Awareness</a></li>
-        <li><a href="chat.html" id="chat-trigger">Chat Support</a></li>
+        <li><a href="/templates/chat.html" id="chat-trigger">Chat Support</a></li>
       </ul>
-          <div class="auth-buttons">
-            <a href="http://localhost:5173/login" id="login-btn">Login</a>
-            <a href="http://localhost:5173/signup"  id="signup-btn">Sign Up</a>
-            
-          </div>
+      <div class="auth-buttons">
+        <a href="http://localhost:5173/login" id="login-btn">Login</a>
+        <a href="http://localhost:5173/signup" id="signup-btn">Sign Up</a>
+
+      </div>
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -47,372 +48,383 @@
   </section>
 
   <!-- Report Form Section -->
- <!-- Updated report.html -->
-<!-- All other sections (header, footer, etc.) remain unchanged -->
-<!-- Only replacing the original report form section with this -->
+  <!-- Updated report.html -->
+  <!-- All other sections (header, footer, etc.) remain unchanged -->
+  <!-- Only replacing the original report form section with this -->
 
-<section class="report-section">
-  <div class="container">
-    <div class="report-intro">
-      <h2>Harassment Report Generator</h2>
-      <p>Fill in the form below. A formal report will be generated and optionally emailed.</p>
-    </div>
+  <section class="report-section">
+    <div class="container">
+      <div class="report-intro">
+        <h2>Harassment Report Generator</h2>
+        <p>Fill in the form below. A formal report will be generated and optionally emailed.</p>
+      </div>
 
-    <div class="report-form-container">
-      <form id="harassment-report-form">
-        <div class="form-row">
+      <div class="report-form-container">
+        <form id="harassment-report-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date of Incident</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="form-group">
+              <label for="language">Report Language</label>
+              <select id="language" required>
+                <option value="english" selected>English</option>
+                <option value="hindi">Hindi</option>
+                <option value="telugu">Telugu</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="time">Time of Incident</label>
+              <input type="time" id="time" required />
+            </div>
+          </div>
+
           <div class="form-group">
-            <label for="date">Date of Incident</label>
-            <input type="date" id="date" required />
+            <label for="location">Place of Incident</label>
+            <input type="text" id="location" required />
           </div>
+
           <div class="form-group">
-            <label for="time">Time of Incident</label>
-            <input type="time" id="time" required />
+            <label for="person">Person Involved (Name & Designation)</label>
+            <input type="text" id="person" required />
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="location">Place of Incident</label>
-          <input type="text" id="location" required />
-        </div>
+          <div class="form-group">
+            <label for="reporter">Your Name</label>
+            <input type="text" id="reporter" required />
+          </div>
 
-        <div class="form-group">
-          <label for="person">Person Involved (Name & Designation)</label>
-          <input type="text" id="person" required />
-        </div>
+          <div class="form-group">
+            <label for="recipient">To Whom the Report is Addressed</label>
+            <input type="text" id="recipient" required />
+          </div>
 
-        <div class="form-group">
-          <label for="reporter">Your Name</label>
-          <input type="text" id="reporter" required />
-        </div>
+          <div class="form-group">
+            <label for="description">Description of Incident</label>
+            <textarea id="description" rows="4" required></textarea>
+          </div>
 
-        <div class="form-group">
-          <label for="recipient">To Whom the Report is Addressed</label>
-          <input type="text" id="recipient" required />
-        </div>
+          <div class="form-group">
+            <label for="evidence">Supporting Evidence</label>
+            <textarea id="evidence" rows="3"></textarea>
+          </div>
 
-        <div class="form-group">
-          <label for="description">Description of Incident</label>
-          <textarea id="description" rows="4" required></textarea>
-        </div>
+          <!-- File Upload Section -->
+          <div class="form-group">
+            <label>Supporting Documents & Media</label>
+            <div class="file-upload-container">
+              <div class="file-upload-section">
+                <label for="file-upload" class="file-upload-label">
+                  <i class="fas fa-file-upload"></i>
+                  <span>Upload Documents</span>
+                </label>
+                <input type="file" id="file-upload" class="file-input" multiple />
+                <div id="file-list" class="file-list"></div>
+              </div>
 
-        <div class="form-group">
-          <label for="evidence">Supporting Evidence</label>
-          <textarea id="evidence" rows="3"></textarea>
-        </div>
-        
-        <!-- File Upload Section -->
-        <div class="form-group">
-          <label>Supporting Documents & Media</label>
-          <div class="file-upload-container">
-            <div class="file-upload-section">
-              <label for="file-upload" class="file-upload-label">
-                <i class="fas fa-file-upload"></i>
-                <span>Upload Documents</span>
-              </label>
-              <input type="file" id="file-upload" class="file-input" multiple />
-              <div id="file-list" class="file-list"></div>
-            </div>
-            
-            <div class="file-upload-section">
-              <label for="photo-upload" class="file-upload-label">
-                <i class="fas fa-image"></i>
-                <span>Upload Photos</span>
-              </label>
-              <input type="file" id="photo-upload" accept="image/*" class="file-input" multiple />
-              <div id="photo-preview" class="file-list"></div>
-            </div>
-            
-            <div class="file-upload-section">
-              <label for="audio-upload" class="file-upload-label">
-                <i class="fas fa-microphone"></i>
-                <span>Upload Audio</span>
-              </label>
-              <input type="file" id="audio-upload" accept="audio/*" class="file-input" multiple />
-              <div id="audio-list" class="file-list"></div>
+              <div class="file-upload-section">
+                <label for="photo-upload" class="file-upload-label">
+                  <i class="fas fa-image"></i>
+                  <span>Upload Photos</span>
+                </label>
+                <input type="file" id="photo-upload" accept="image/*" class="file-input" multiple />
+                <div id="photo-preview" class="file-list"></div>
+              </div>
+
+              <div class="file-upload-section">
+                <label for="audio-upload" class="file-upload-label">
+                  <i class="fas fa-microphone"></i>
+                  <span>Upload Audio</span>
+                </label>
+                <input type="file" id="audio-upload" accept="audio/*" class="file-input" multiple />
+                <div id="audio-list" class="file-list"></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="form-group checkbox-group">
-          <input type="checkbox" id="send-email" />
-          <label for="send-email">Send Report via Email</label>
-        </div>
-        
-        <div class="form-group" id="email-group" style="display: none;">
-          <label for="email">Recipient Email(s) (comma-separated)</label>
-          <textarea id="email" rows="2"></textarea>
-        </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="send-email" />
+            <label for="send-email">Send Report via Email</label>
+          </div>
 
-        <div class="form-actions">
-          <button type="button" class="btn btn-secondary" id="download-btn">Download as Word</button>
-          <button type="button" class="btn btn-secondary" id="email-btn">Send Email</button>
-          <button type="button" class="btn btn-primary" id="generate-btn">Generate Report</button>
-        </div>
-      </form>
+          <div class="form-group" id="email-group" style="display: none;">
+            <label for="email">Recipient Email(s) (comma-separated)</label>
+            <textarea id="email" rows="2"></textarea>
+          </div>
 
-      <div id="result-container" style="display:none; margin-top: 20px;">
-        <h3>📄 Generated Report</h3>
-        <textarea id="generated-report" rows="15" readonly></textarea>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="download-btn">Download as Word</button>
+            <button type="button" class="btn btn-secondary" id="email-btn">Send Email</button>
+            <button type="button" class="btn btn-primary" id="generate-btn">Generate Report</button>
+          </div>
+        </form>
+
+        <div id="result-container" style="display:none; margin-top: 20px;">
+          <h3>📄 Generated Report</h3>
+          <textarea id="generated-report" rows="15" readonly></textarea>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  const BASE_URL = "http://127.0.0.1:8001";
+  <script>
+    const BASE_URL = "http://127.0.0.1:8001";
 
-  document.getElementById('send-email').addEventListener('change', function () {
-    document.getElementById('email-group').style.display = this.checked ? 'block' : 'none';
-  });
-
-  // File Upload Handling
-  function handleFileUpload(inputId, listId, isImage = false) {
-    const input = document.getElementById(inputId);
-    const list = document.getElementById(listId);
-    
-    input.addEventListener('change', function() {
-      list.innerHTML = '';
-      
-      for (const file of this.files) {
-        const item = document.createElement('div');
-        item.className = 'file-item';
-        
-        if (isImage && file.type.startsWith('image/')) {
-          const preview = document.createElement('img');
-          preview.className = 'file-preview';
-          preview.src = URL.createObjectURL(file);
-          
-          const nameElement = document.createElement('div');
-          nameElement.className = 'file-item-name';
-          nameElement.textContent = file.name;
-          
-          const removeBtn = document.createElement('span');
-          removeBtn.className = 'file-item-remove';
-          removeBtn.innerHTML = '<i class="fas fa-times"></i>';
-          removeBtn.onclick = function() {
-            item.remove();
-            // We can't directly modify the FileList, but we can track what's been removed
-          };
-          
-          item.appendChild(preview);
-          item.appendChild(nameElement);
-          item.appendChild(removeBtn);
-        } else {
-          const icon = document.createElement('i');
-          if (file.type.startsWith('audio/')) {
-            icon.className = 'fas fa-music';
-          } else {
-            icon.className = 'fas fa-file';
-          }
-          
-          const nameElement = document.createElement('div');
-          nameElement.className = 'file-item-name';
-          nameElement.textContent = file.name;
-          
-          const removeBtn = document.createElement('span');
-          removeBtn.className = 'file-item-remove';
-          removeBtn.innerHTML = '<i class="fas fa-times"></i>';
-          removeBtn.onclick = function() {
-            item.remove();
-          };
-          
-          item.appendChild(icon);
-          item.appendChild(nameElement);
-          item.appendChild(removeBtn);
-        }
-        
-        list.appendChild(item);
-      }
+    document.getElementById('send-email').addEventListener('change', function () {
+      document.getElementById('email-group').style.display = this.checked ? 'block' : 'none';
     });
-  }
 
-  // Initialize file upload handlers
-  handleFileUpload('file-upload', 'file-list');
-  handleFileUpload('photo-upload', 'photo-preview', true);
-  handleFileUpload('audio-upload', 'audio-list');
+    // File Upload Handling
+    function handleFileUpload(inputId, listId, isImage = false) {
+      const input = document.getElementById(inputId);
+      const list = document.getElementById(listId);
 
-  async function generateReport() {
-    try {
-      const data = {
-        date: document.getElementById('date').value,
-        time: document.getElementById('time').value,
-        location: document.getElementById('location').value,
-        person: document.getElementById('person').value,
-        reporter: document.getElementById('reporter').value,
-        recipient: document.getElementById('recipient').value,
-        description: document.getElementById('description').value,
-        evidence: document.getElementById('evidence').value
-      };
+      input.addEventListener('change', function () {
+        list.innerHTML = '';
 
-      const response = await fetch(`${BASE_URL}/generate-report`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        for (const file of this.files) {
+          const item = document.createElement('div');
+          item.className = 'file-item';
+
+          if (isImage && file.type.startsWith('image/')) {
+            const preview = document.createElement('img');
+            preview.className = 'file-preview';
+            preview.src = URL.createObjectURL(file);
+
+            const nameElement = document.createElement('div');
+            nameElement.className = 'file-item-name';
+            nameElement.textContent = file.name;
+
+            const removeBtn = document.createElement('span');
+            removeBtn.className = 'file-item-remove';
+            removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+            removeBtn.onclick = function () {
+              item.remove();
+              // We can't directly modify the FileList, but we can track what's been removed
+            };
+
+            item.appendChild(preview);
+            item.appendChild(nameElement);
+            item.appendChild(removeBtn);
+          } else {
+            const icon = document.createElement('i');
+            if (file.type.startsWith('audio/')) {
+              icon.className = 'fas fa-music';
+            } else {
+              icon.className = 'fas fa-file';
+            }
+
+            const nameElement = document.createElement('div');
+            nameElement.className = 'file-item-name';
+            nameElement.textContent = file.name;
+
+            const removeBtn = document.createElement('span');
+            removeBtn.className = 'file-item-remove';
+            removeBtn.innerHTML = '<i class="fas fa-times"></i>';
+            removeBtn.onclick = function () {
+              item.remove();
+            };
+
+            item.appendChild(icon);
+            item.appendChild(nameElement);
+            item.appendChild(removeBtn);
+          }
+
+          list.appendChild(item);
+        }
       });
-
-      if (!response.ok) throw new Error("Failed to generate report");
-      const result = await response.json();
-
-      document.getElementById('generated-report').value = result.report;
-      document.getElementById('result-container').style.display = 'block';
-    } catch (err) {
-      alert("Error: " + err.message);
-      console.error(err);
     }
-  }
 
-  async function downloadReport() {
-    const reportText = document.getElementById('generated-report').value;
-    try {
-      const success = await window.downloadReportAsWord(reportText);
-      if (!success) {
-        throw new Error("Client-side report generation failed.");
+    // Initialize file upload handlers
+    handleFileUpload('file-upload', 'file-list');
+    handleFileUpload('photo-upload', 'photo-preview', true);
+    handleFileUpload('audio-upload', 'audio-list');
+
+    async function generateReport() {
+      try {
+        const data = {
+          language: document.getElementById('language').value,
+          date: document.getElementById('date').value,
+          time: document.getElementById('time').value,
+          location: document.getElementById('location').value,
+          person: document.getElementById('person').value,
+          reporter: document.getElementById('reporter').value,
+          recipient: document.getElementById('recipient').value,
+          description: document.getElementById('description').value,
+          evidence: document.getElementById('evidence').value
+        };
+
+        const response = await fetch(`${BASE_URL}/generate-report`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error("Failed to generate report");
+        const result = await response.json();
+
+        document.getElementById('generated-report').value = result.report;
+        document.getElementById('result-container').style.display = 'block';
+      } catch (err) {
+        alert("Error: " + err.message);
+        console.error(err);
       }
-    } catch (err) {
-      alert("Download failed: " + err.message);
-      console.error(err);
     }
-  }
 
-  async function sendEmail() {
-    try {
+    async function downloadReport() {
       const reportText = document.getElementById('generated-report').value;
-      const emails = document.getElementById('email').value;
-      
-      // Create FormData to handle files
-      const formData = new FormData();
-      formData.append('report', reportText);
-      formData.append('emails', emails);
-      
-      // Add document files
-      const documentFiles = document.getElementById('file-upload').files;
-      for (let i = 0; i < documentFiles.length; i++) {
-        formData.append('files', documentFiles[i]);
+      try {
+        const success = await window.downloadReportAsWord(reportText);
+        if (!success) {
+          throw new Error("Client-side report generation failed.");
+        }
+      } catch (err) {
+        alert("Download failed: " + err.message);
+        console.error(err);
       }
-      
-      // Add photo files
-      const photoFiles = document.getElementById('photo-upload').files;
-      for (let i = 0; i < photoFiles.length; i++) {
-        formData.append('photos', photoFiles[i]);
+    }
+
+    async function sendEmail() {
+      try {
+        const reportText = document.getElementById('generated-report').value;
+        const emails = document.getElementById('email').value;
+
+        // Create FormData to handle files
+        const formData = new FormData();
+        formData.append('report', reportText);
+        formData.append('emails', emails);
+
+        // Add document files
+        const documentFiles = document.getElementById('file-upload').files;
+        for (let i = 0; i < documentFiles.length; i++) {
+          formData.append('files', documentFiles[i]);
+        }
+
+        // Add photo files
+        const photoFiles = document.getElementById('photo-upload').files;
+        for (let i = 0; i < photoFiles.length; i++) {
+          formData.append('photos', photoFiles[i]);
+        }
+
+        // Add audio files
+        const audioFiles = document.getElementById('audio-upload').files;
+        for (let i = 0; i < audioFiles.length; i++) {
+          formData.append('audio', audioFiles[i]);
+        }
+
+        const response = await fetch(`${BASE_URL}/send-email-with-attachments`, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) throw new Error("Failed to send email");
+        const result = await response.json();
+        alert(result.message);
+      } catch (err) {
+        alert("Email failed: " + err.message);
+        console.error(err);
       }
-      
-      // Add audio files
-      const audioFiles = document.getElementById('audio-upload').files;
-      for (let i = 0; i < audioFiles.length; i++) {
-        formData.append('audio', audioFiles[i]);
+    }
+
+    document.getElementById('generate-btn').addEventListener('click', generateReport);
+    document.getElementById('download-btn').addEventListener('click', downloadReport);
+    document.getElementById('email-btn').addEventListener('click', sendEmail);
+  </script>
+
+  <script>
+    document.getElementById('send-email').addEventListener('change', function () {
+      document.getElementById('email-group').style.display = this.checked ? 'block' : 'none';
+    });
+
+    async function generateReport() {
+      try {
+        const data = {
+          date: document.getElementById('date').value,
+          time: document.getElementById('time').value,
+          location: document.getElementById('location').value,
+          person: document.getElementById('person').value,
+          reporter: document.getElementById('reporter').value,
+          recipient: document.getElementById('recipient').value,
+          description: document.getElementById('description').value,
+          evidence: document.getElementById('evidence').value
+        };
+
+        const response = await fetch(`${BASE_URL}/generate-report`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error("Failed to generate report");
+        const result = await response.json();
+
+        document.getElementById('generated-report').value = result.report;
+        document.getElementById('result-container').style.display = 'block';
+      } catch (err) {
+        alert("Error: " + err.message);
+        console.error(err);
       }
-      
-      const response = await fetch(`${BASE_URL}/send-email-with-attachments`, {
-        method: 'POST',
-        body: formData
-      });
-
-      if (!response.ok) throw new Error("Failed to send email");
-      const result = await response.json();
-      alert(result.message);
-    } catch (err) {
-      alert("Email failed: " + err.message);
-      console.error(err);
     }
-  }
 
-  document.getElementById('generate-btn').addEventListener('click', generateReport);
-  document.getElementById('download-btn').addEventListener('click', downloadReport);
-  document.getElementById('email-btn').addEventListener('click', sendEmail);
-</script>
-
-<script>
-  document.getElementById('send-email').addEventListener('change', function () {
-    document.getElementById('email-group').style.display = this.checked ? 'block' : 'none';
-  });
-
-  async function generateReport() {
-    try {
-      const data = {
-        date: document.getElementById('date').value,
-        time: document.getElementById('time').value,
-        location: document.getElementById('location').value,
-        person: document.getElementById('person').value,
-        reporter: document.getElementById('reporter').value,
-        recipient: document.getElementById('recipient').value,
-        description: document.getElementById('description').value,
-        evidence: document.getElementById('evidence').value
-      };
-
-      const response = await fetch(`${BASE_URL}/generate-report`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      if (!response.ok) throw new Error("Failed to generate report");
-      const result = await response.json();
-
-      document.getElementById('generated-report').value = result.report;
-      document.getElementById('result-container').style.display = 'block';
-    } catch (err) {
-      alert("Error: " + err.message);
-      console.error(err);
-    }
-  }
-
-  async function downloadReport() {
-  const reportText = document.getElementById('generated-report').value;
-  try {
-    const success = await window.downloadReportAsWord(reportText);
-    if (!success) {
-      throw new Error("Client-side report generation failed.");
-    }
-  } catch (err) {
-    alert("Download failed: " + err.message);
-    console.error(err);
-  }
-}
-
-
-  async function sendEmail() {
-    try {
+    async function downloadReport() {
       const reportText = document.getElementById('generated-report').value;
-      const emails = document.getElementById('email').value;
-      const response = await fetch(`${BASE_URL}/send-email`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ report: reportText, emails })
-      });
-
-      if (!response.ok) throw new Error("Failed to send email");
-      const result = await response.json();
-      alert(result.message);
-    } catch (err) {
-      alert("Email failed: " + err.message);
-      console.error(err);
+      try {
+        const success = await window.downloadReportAsWord(reportText);
+        if (!success) {
+          throw new Error("Client-side report generation failed.");
+        }
+      } catch (err) {
+        alert("Download failed: " + err.message);
+        console.error(err);
+      }
     }
-  }
-
-  document.getElementById('generate-btn').addEventListener('click', generateReport);
-  document.getElementById('download-btn').addEventListener('click', downloadReport);
-  document.getElementById('email-btn').addEventListener('click', sendEmail);
-</script>
 
 
-<section>
-      <div class="help-sidebar">
-        <div class="help-card">
-          <h3><i class="fas fa-shield-alt"></i> Your Privacy Matters</h3>
-          <p>Your report is encrypted and only accessible to authorized support specialists. We never share your information without consent.</p>
-        </div>
-        <div class="help-card">
-          <h3><i class="fas fa-question-circle"></i> Need Help?</h3>
-          <p>If you're unsure about any part of this form or need assistance, our support team is ready to help.</p>
-          <button class="btn btn-outline" id="report-chat-trigger"><i class="fas fa-comments"></i> Chat with Support</button>
-        </div>
-        <div class="help-card">
-          <h3><i class="fas fa-phone-alt"></i> Emergency Support</h3>
-          <p>If you need immediate assistance, please call our 24/7 helpline.</p>
-          <a href="tel:18007233669" class="btn btn-outline"><i class="fas fa-phone"></i> 1-800-SAFE-NOW</a>
-        </div>
+    async function sendEmail() {
+      try {
+        const reportText = document.getElementById('generated-report').value;
+        const emails = document.getElementById('email').value;
+        const response = await fetch(`${BASE_URL}/send-email`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ report: reportText, emails })
+        });
+
+        if (!response.ok) throw new Error("Failed to send email");
+        const result = await response.json();
+        alert(result.message);
+      } catch (err) {
+        alert("Email failed: " + err.message);
+        console.error(err);
+      }
+    }
+
+    document.getElementById('generate-btn').addEventListener('click', generateReport);
+    document.getElementById('download-btn').addEventListener('click', downloadReport);
+    document.getElementById('email-btn').addEventListener('click', sendEmail);
+  </script>
+
+
+  <section>
+    <div class="help-sidebar">
+      <div class="help-card">
+        <h3><i class="fas fa-shield-alt"></i> Your Privacy Matters</h3>
+        <p>Your report is encrypted and only accessible to authorized support specialists. We never share your
+          information without consent.</p>
       </div>
+      <div class="help-card">
+        <h3><i class="fas fa-question-circle"></i> Need Help?</h3>
+        <p>If you're unsure about any part of this form or need assistance, our support team is ready to help.</p>
+        <button class="btn btn-outline" id="report-chat-trigger"><i class="fas fa-comments"></i> Chat with
+          Support</button>
+      </div>
+      <div class="help-card">
+        <h3><i class="fas fa-phone-alt"></i> Emergency Support</h3>
+        <p>If you need immediate assistance, please call our 24/7 helpline.</p>
+        <a href="tel:18007233669" class="btn btn-outline"><i class="fas fa-phone"></i> 1-800-SAFE-NOW</a>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -421,7 +433,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <h3>H.E.<span>A.R</span></h3>
+          <h3>Safe<span>Guard</span></h3>
           <p>Providing support, resources, and a safe platform for incident reporting and assistance.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -453,22 +465,22 @@
         <div class="footer-contact">
           <h4>Contact Us</h4>
           <p><i class="fas fa-phone"></i> Emergency: 1-800-SAFE-NOW</p>
-          <p><i class="fas fa-envelope"></i> info@H.E.A.R.org</p>
+          <p><i class="fas fa-envelope"></i> info@safeguard.org</p>
           <p><i class="fas fa-map-marker-alt"></i> 123 Safety Avenue, Secure City, SC 12345</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 H.E.A.R. All rights reserved.</p>
+        <p>&copy; 2025 SafeGuard. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
 
-  
+
   <script src="js/auth.js"></script>
   <script src="js/chat.js"></script>
   <script src="js/document.js"></script>
-  <script src="profile.js"></script>
 
 </body>
+
 </html>
