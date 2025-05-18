@@ -58,8 +58,10 @@ H.E.A.R provides a robust, multi-faceted approach to addressing harassment:
 ![Screenshot 2025-05-18 150827](https://github.com/user-attachments/assets/d66c4d85-4435-494a-bc6f-553a400aaaf9)
 ![Screenshot 2025-05-18 150842](https://github.com/user-attachments/assets/fc306e2b-9204-4d12-9b5a-249a5bcc1b18)
 
+
 ### Awareness & Prevention Page
 ![Screenshot 2025-05-18 150853](https://github.com/user-attachments/assets/89f29918-6491-4b8d-92f4-4ee71c121cc1)
+![sos](https://github.com/user-attachments/assets/70093639-3643-48e8-a296-c89b39ec3ec6)
 
 
 ### Campus Safety Resources
