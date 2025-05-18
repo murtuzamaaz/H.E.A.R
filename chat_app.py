@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # Set your Groq API key
-groq_api_key = "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"
+groq_api_key = "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"
 client = Groq(api_key=groq_api_key)
 
 # Initialize session storage (in a real app, you'd use a database)
@@ -130,3 +130,5 @@ def cleanup_old_sessions():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("chat_app:app", host="127.0.0.1", port=5100, reload=True)
+
+# hello

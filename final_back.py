@@ -25,7 +25,7 @@ app.add_middleware(
 # Replace with real values
 SENDER_EMAIL = "mustafataj13@gmail.com"
 SENDER_APP_PASSWORD = "dnwyjgxbzskwzluk"
-GROQ_API_KEY = "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"
+GROQ_API_KEY = "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"
 MODEL_NAME = "llama-3.3-70b-versatile"
 
 class ReportData(BaseModel):

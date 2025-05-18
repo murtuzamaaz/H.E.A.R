@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report an Incident - H.E.A.R</title>
+  <title>Report an Incident - SafeGuard</title>
   <link rel="stylesheet" href="/static/css/header.css">
   <link rel="stylesheet" href="/static/css/footer.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="/static/css/login_credentials.css">
   <script src="js/main.js" defer></script>
 </head>
 
@@ -19,7 +18,7 @@
   <header>
     <nav>
       <div class="logo">
-        <a href="index.html">H.E.<span>A.R</span></a>
+        <a href="index.html">H.E<span>A.R</span></a>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -357,13 +356,21 @@
           body: JSON.stringify(data)
         });
 
+<<<<<<< HEAD
         if (!response.ok) throw new Error("Genrated Report");
+=======
+        if (!response.ok) throw new Error("Failed to generate report");
+>>>>>>> 6c21c7674fb3cfb28de26288a94909400d5cd4c6
         const result = await response.json();
 
         document.getElementById('generated-report').value = result.report;
         document.getElementById('result-container').style.display = 'block';
       } catch (err) {
+<<<<<<< HEAD
         alert("Generated: " + err.message);
+=======
+        alert("Error: " + err.message);
+>>>>>>> 6c21c7674fb3cfb28de26288a94909400d5cd4c6
         console.error(err);
       }
     }
@@ -481,7 +488,6 @@
   <script src="js/auth.js"></script>
   <script src="js/chat.js"></script>
   <script src="js/document.js"></script>
-  <script src="profile.js"></script>
 
 </body>
 
