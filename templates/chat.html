@@ -10,34 +10,38 @@
   <link rel="stylesheet" href="/static/css/bot.css">
   <link rel="stylesheet" href="/static/css/footer.css">
   <link rel="stylesheet" href="/static/css/login_credentials.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/animations.css">
   <link rel="icon" type="image/svg+xml" href="assets/shield-icon.svg">
   <!-- Latest Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="logo">
-            <a href="index.html">H.E.<span>A.R</span></a>
-          </div>
-          <ul class="nav-links">
-            <li><a href="/index" class="active">Home</a></li>
-            <li><a href="/report">Report</a></li>
-            <li><a href="/awareness">Awareness</a></li>
-            <li><a href="/templates/chat.html" id="chat-trigger">Chat Support</a></li>
-          </ul>
-          <div class="auth-buttons">
-            <a href="http://localhost:5173/login" class="nav-link" id="login-btn">Login</a>
-            <a href="http://localhost:5173/signup" class="nav-link" id="signup-btn">Sign Up</a>
-            
-          </div>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">H.E.<span>A.R</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="awareness.html">Awareness</a></li>
+        <li><a href="/templates/chat.html" id="chat-trigger" class="active">Chat Support</a></li>
+
+      </ul>
+      <div class="auth-buttons">
+        <a href="http://localhost:5173/login"  id="login-btn">Login</a>
+        <a href="http://localhost:5173/signup"  id="signup-btn">Sign Up</a>
+        
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+</header>
       </header>
 
     <main>
@@ -56,13 +60,13 @@
               Our intelligent security assistant helps protect your data and privacy with real-time monitoring and expert guidance.
             </p>
             <div class="hero-actions">
-              <button id="chat-now-btn" class="btn btn-primary">
+              <button id="chat-now-btn" class="btn_chat">
                 Chat with Security Assistant
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
               </button>
-              <button class="btn btn-secondary">Learn More</button>
+              <button class="btn_chat2">Learn More</button>
             </div>
           </div>
           <div class="hero-image">
@@ -130,7 +134,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-about">
-            <h3>H.E.A.R<span>H.E.A.R</span></h3>
+            <h3>H.E.<span>A.R</span></h3>
             <p>Providing support, resources, and a safe platform for incident reporting and assistance.</p>
             <div class="social-links">
               <a href="#"><i class="fab fa-facebook-f"></i></a>

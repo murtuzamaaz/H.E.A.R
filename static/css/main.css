@@ -256,3 +256,46 @@
     outline: 2px solid var(--color-primary-500);
     outline-offset: 2px;
   }
+
+
+  /* New Added code */
+
+  /* Common button styles */
+.btn_chat,
+.btn_chat2 {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Blue primary button */
+.btn_chat {
+  background-color: #0070f3;
+  color: white;
+}
+
+.btn_chat:hover {
+  background-color: #005fd1;
+}
+
+/* Gray secondary button */
+.btn_chat2 {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn_chat2:hover {
+  background-color: #5a6268;
+}
+
+/* Optional: reset SVG stroke color to inherit */
+.btn_chat svg {
+  stroke: currentColor;
+}

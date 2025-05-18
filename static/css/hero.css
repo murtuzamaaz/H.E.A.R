@@ -53,15 +53,17 @@
     gap: var(--space-4);
   }
   
-  .security-illustration {
+ 
+.security-illustration {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 280px;
     color: var(--color-primary-500);
-    opacity: 0.9;
+    opacity: 1;
     animation: float 6s ease-in-out infinite;
+    position: sticky ;
   }
   
   @keyframes float {

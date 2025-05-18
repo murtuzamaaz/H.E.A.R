@@ -1,14 +1,15 @@
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: var(--z-sticky);
-  background-color: var(--white);
+  background-color: #ffffff;
   box-shadow: var(--shadow);
   transition: var(--transition-base);
+  border-bottom: 1px solid #e0e0e0;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -25,8 +26,10 @@ nav {
   text-decoration: none;
 }
 
+
+
 .logo span {
-  color: var(--primary);
+  color: #0d6efd;
 }
 
 /* Navigation Links */
