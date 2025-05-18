@@ -63,10 +63,12 @@ H.E.A.R provides a robust, multi-faceted approach to addressing harassment:
 
 
 ### Campus Safety Resources
-![Campus Safety](./path-to-screenshot-campus-safety.jpg)
+![Screenshot 2025-05-18 151113](https://github.com/user-attachments/assets/86e736af-1679-4fbf-bd06-5de9980501b6)
+
 
 ### Saheli AI Chat Support
-![Screenshot 2025-05-18 151113](https://github.com/user-attachments/assets/86e736af-1679-4fbf-bd06-5de9980501b6)
+
+![Uploading Screenshot 2025-05-18 160230.png…]()
 
 
 
