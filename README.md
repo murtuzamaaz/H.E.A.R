@@ -53,22 +53,22 @@ H.E.A.R provides a robust, multi-faceted approach to addressing harassment:
 
 ## Screenshots & Walkthrough
 
-> Use the placeholders below to embed screenshots visually.
+![Screenshot 2025-05-18 150753](https://github.com/user-attachments/assets/b76fe31d-3d00-41ad-8f33-0fbcfa817c60)
+![Screenshot 2025-05-18 150811](https://github.com/user-attachments/assets/2f0e8e31-4ad9-46c9-9fda-54259020641c)
+![Screenshot 2025-05-18 150827](https://github.com/user-attachments/assets/d66c4d85-4435-494a-bc6f-553a400aaaf9)
+![Screenshot 2025-05-18 150842](https://github.com/user-attachments/assets/fc306e2b-9204-4d12-9b5a-249a5bcc1b18)
 
 ### Awareness & Prevention Page
-![Awareness Module](./path-to-screenshot-awareness.jpg)
+![Screenshot 2025-05-18 150853](https://github.com/user-attachments/assets/89f29918-6491-4b8d-92f4-4ee71c121cc1)
+
 
 ### Campus Safety Resources
 ![Campus Safety](./path-to-screenshot-campus-safety.jpg)
 
 ### Saheli AI Chat Support
-![Saheli Chatbot](./path-to-screenshot-saheli-chat.jpg)
+![Screenshot 2025-05-18 151113](https://github.com/user-attachments/assets/86e736af-1679-4fbf-bd06-5de9980501b6)
 
-### Report Incident Form
-![Report Form](./path-to-screenshot-report-form.jpg)
 
-### Dashboard Interface
-![User/Admin Dashboard](./path-to-screenshot-dashboard.jpg)
 
 ---
 
