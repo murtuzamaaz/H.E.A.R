@@ -117,13 +117,14 @@ npm start
 
 > Make sure you configure your environment variables in a .env file.
 
-### Prerequisites
+### How to run
 
-* Node.js (v18+)
-* MongoDB Atlas or local instance
-* OpenAI API key
-* Firebase Project Setup
-
+step 1:download all dependencies from requirement.txt 
+step2:install nodejs
+step 3:activate virtual environment 
+step4 :run these commands in git bash 
+chmod +x start-server.sh
+./start-server.sh
 ---
 
 ## Contribution Guidelines
