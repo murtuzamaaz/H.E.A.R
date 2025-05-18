@@ -117,14 +117,31 @@ npm start
 
 > Make sure you configure your environment variables in a .env file.
 
-### How to run
+### How to Run
 
-step 1:download all dependencies from requirement.txt 
-step2:install nodejs
-step 3:activate virtual environment 
-step4 :run these commands in git bash 
-chmod +x start-server.sh
-./start-server.sh
+1. **Install Python dependencies**  
+   Make sure you have Python installed, then run:
+   ```bash
+   pip install -r requirements.txt
+
+2. Install Node.js  
+   Download and install it from https://nodejs.org/
+
+3. Activate the virtual environment  
+    For Windows:
+    ```bash
+    .\venv\Scripts\activate 
+    ```
+    For macOS/Linux:
+    ```bash
+    source venv/bin/activate
+    ```
+5. Run the server  
+   Open Git Bash and execute:
+   ```bash
+   chmod +x start-server.sh
+   ./start-server.sh
+   ```
 ---
 
 ## Contribution Guidelines
