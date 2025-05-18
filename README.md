@@ -68,7 +68,7 @@ H.E.A.R provides a robust, multi-faceted approach to addressing harassment:
 
 ### Saheli AI Chat Support
 
-![Uploading Screenshot 2025-05-18 160230.png…]()
+![Screenshot 2025-05-18 160230](https://github.com/user-attachments/assets/903f5567-8f2e-4fda-ad8e-360ee32263af)
 
 
 
