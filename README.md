@@ -95,9 +95,9 @@ Follow these steps to use the H.E.A.R platform effectively:
 |----------------|-------------------------------------------|
 | *Frontend*    | React.js, Tailwind CSS                   |
 | *Backend*     | Node.js, Express.js                      |
-| *Database*    | MongoDB                                  |
+| *Database*    | MySQL                                 |
 | *AI & NLP*    | Langchain, OpenAI GPT APIs               |
-| *Authentication* | Firebase Auth                        |
+| *Authentication* | SHA256                        |
 | *Hosting*     | Vercel / Heroku                          |
 
 ---
