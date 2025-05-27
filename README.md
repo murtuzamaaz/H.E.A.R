@@ -98,7 +98,7 @@ Follow these steps to use the H.E.A.R platform effectively:
 | Category        | Technologies Used                        |
 |----------------|-------------------------------------------|
 | *Frontend*    | React.js, Tailwind CSS                   |
-| *Backend*     | Node.js, Express.js                      |
+| *Backend*     | Node.js, Express.js,FAST API                      |
 | *Database*    | MySQL                                 |
 | *AI & NLP*    | Langchain, OpenAI GPT APIs               |
 | *Authentication* | SHA256                        |
